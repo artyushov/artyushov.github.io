@@ -1,0 +1,27 @@
+body {
+    background-color: #252830;
+    padding-top: 50px;
+}
+
+.nav > .header {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    font-size: 85%;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #51586a;
+    text-transform: uppercase;
+}
+
+.nav > li + .header {
+    margin-top: 20px;
+}
+
+hr.divider {
+    margin-top: 20px !important;
+    border: 0;
+    border-top: 1px solid #434857;
+    box-sizing: content-box;
+    height: 0;
+}
