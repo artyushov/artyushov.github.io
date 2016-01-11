@@ -25,3 +25,28 @@ hr.divider {
     box-sizing: content-box;
     height: 0;
 }
+
+a.underline {
+    text-decoration: underline;
+}
+
+a.read-more {
+    color: #1997c6;
+    background-color: transparent;
+    text-transform: none;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #1997c6;
+    line-height: 1.5;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: normal;
+    display: inline-block;
+    padding: 6px 20px;
+}
+
+a.read-more:hover {
+    background-color: #1997c6;
+    color: #fff;
+    text-decoration: none;
+}

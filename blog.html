@@ -5,5 +5,13 @@ menu_name: "Blog"
 
 <div class="container-fluid" style="font-size: 1.1em">
 
-    <span>My blog</span>
+    <h1 class="pull-right">All posts</h1>
+    <div style="clear:both"></div>
+    <hr class="divider">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+    {{ post.excerpt }}
+    <a class="read-more" href="{{ post.url }}">Full text</a>
+    <hr class="divider">
+    {% endfor %}
 </div>
