@@ -3,7 +3,6 @@ layout: post
 title:  "Another test"
 date:   2016-01-12 00:30:00 +0200
 categories: jekyll blog
-menu_name: "Blog"
 ---
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
