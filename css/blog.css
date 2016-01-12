@@ -50,3 +50,19 @@ a.read-more:hover {
     color: #fff;
     text-decoration: none;
 }
+
+nav li a span.post-title {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/*figure.highlight code span {*/
+    /*overflow:hidden;*/
+    /*text-overflow:ellipsis;*/
+    /*white-space: nowrap;*/
+    /*max-width: 100%;*/
+    /*display: inline-block;*/
+/*}*/
