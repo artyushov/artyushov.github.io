@@ -16,7 +16,7 @@ compile('org.springframework.security:spring-security-config:4.0.3.RELEASE')
 {% endhighlight %}
 
 Let's add a controller which will serve us as a test for our security configuration. Mapping names should say for themselves.
-{% highlight java %}
+{% highlight java linenos %}
 @RestController
 public class IndexController {
 
@@ -40,7 +40,7 @@ public class IndexController {
 Next, you should implement the security configuration itself. I'll give you a minimal working example right away,
 and then explain how to modify it.
 
-{% highlight java %}
+{% highlight java linenos %}
 @Configuration
 @EnableWebSecurity
 @ComponentScan("me.artyushov.blog")
