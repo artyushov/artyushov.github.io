@@ -80,3 +80,31 @@ http.authorizeRequests().antMatchers("/**").hasRole("USER").antMatchers("/admin/
         .hasRole("ADMIN")
 {% endhighlight %}
 </blockquote>
+
+Specifying <code>formLogin()</code> will create a default login form with <code>/login</code> mapping. You can set the
+link for login form by adding <code>.loginPage("myLoginPage")</code>.
+
+Now, suppose you have a table with user information in your database. So let's change our code so that it uses this
+information.
+
+{% highlight java linenos %}
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        JdbcDaoImpl userDetailsService = new JdbcDaoImpl();
+        userDetailsService.setJdbcTemplate(jdbcTemplate);
+        userDetailsService.setUsersByUsernameQuery(
+                "select name, password, 1 from User where name = ?");
+        userDetailsService.setAuthoritiesByUsernameQuery(
+                "select name, authority FROM UserAuthority where name = ?");
+
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+        authenticationProvider.setUserDetailsService(userDetailsService);
+
+        auth.authenticationProvider(authenticationProvider);
+    }
+{% endhighlight %}
+
+I hope that the code here is self explanatory. Note that <code>JdbcDaoImpl</code> and <code>DaoAuthenticationProvider</code>
+are provided by Spring, but you can implement your own <code>UserDetailsService</code> as you wish.
+
+PasswordEncoder
