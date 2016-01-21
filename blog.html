@@ -9,7 +9,7 @@ menu_name: "Blog"
     <div style="clear:both"></div>
     <hr class="divider">
     {% for post in site.posts %}
-    <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+    <h4>{{ post.title }}</h4>
     {{ post.excerpt }}
     <a class="read-more" href="{{ post.url }}">Full text</a>
     <hr class="divider">

@@ -59,6 +59,26 @@ nav li a span.post-title {
     display: inline-block;
 }
 
+#no-posts {
+    line-height: normal;
+}
+
+.site-footer {
+    width: 100%;
+    padding: 30px;
+    margin-top: 40px;
+    background-color: #2f3139;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
 /*figure.highlight code span {*/
     /*overflow:hidden;*/
     /*text-overflow:ellipsis;*/

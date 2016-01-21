@@ -4,6 +4,10 @@ title:  "Setting up Spring Security step by step"
 categories: blog
 ---
 
+Just before starting this blog I was trying to implement a quick demo application which had different privileges for
+different users. I already knew about spring security and wanted to play with it. However, I wasn't satisfied with the
+quality of the tutorials I managed to find, so I decided to provide my own, which covers all the cases I was interested in.
+
 In this post I want to describe how to add <a class="underline" href="http://projects.spring.io/spring-security/">Spring Security</a>
 to your application and customize it step by step. I assume that you already have a running web application.
 All configurations will be implemented in Java (not xml).
@@ -107,4 +111,5 @@ information.
 I hope that the code here is self explanatory. Note that <code>JdbcDaoImpl</code> and <code>DaoAuthenticationProvider</code>
 are provided by Spring, but you can implement your own <code>UserDetailsService</code> as you wish.
 
-PasswordEncoder
+One more useful feature I'd like to mention is the possibility to specify password encoder for authentication provider.
+Spring security provides several default implementations for it which should be enough for the start.
